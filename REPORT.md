@@ -49,7 +49,7 @@ The number of the input units of the neural network is 37, corresponding to the 
 
 ![DQN score](./images/Score.png)
 
-This model solved the environment in **489** episodes, which meets the requirement that the agent is able to receive an average reward (over 100 episodes) of at least +13.
+This model solved the environment in **489** episodes, which meets the requirement that the agent is able to receive an average reward (over 100 episodes) of at least +13. The final model is saved in 'checkpoint.pth'.
 
 ## Ideas for Future Work
 
