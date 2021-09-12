@@ -5,7 +5,7 @@
 # Udacity Deep Reinforcement Learning Project 1: Navigation
 Yu Tao
 
-### Project Details
+## Project Details
 
 In this project, a reinforcement learning (RL) agent was trained to navigate (and collect bananas!) in a large, square world.  
 
@@ -20,7 +20,44 @@ The environment is similar to the [Unity's Banana Collector environment](https:/
 - **`3`** - turn right.
 
 
-### Getting Started
+## Getting Started
+
+### Dependencies
+
+To set up the python environment to run the code in this repository, follow the instructions below.
+
+1. Create (and activate) a new environment with Python 3.6.
+
+	- __Linux__ or __Mac__: 
+	```bash
+	conda create --name drlnd python=3.6
+	source activate drlnd
+	```
+	- __Windows__: 
+	```bash
+	conda create --name drlnd python=3.6 
+	activate drlnd
+	```
+	
+2. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.  
+	- Next, install the **classic control** environment group by following the instructions [here](https://github.com/openai/gym#classic-control).
+	- Then, install the **box2d** environment group by following the instructions [here](https://github.com/openai/gym#box2d).
+	
+3. Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies.
+```bash
+git clone https://github.com/udacity/deep-reinforcement-learning.git
+cd deep-reinforcement-learning/python
+pip install .
+```
+
+4. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
+```bash
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+```
+
+5. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
+
+### Download the environment
 
 1. Download the environment from one of the links below. You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
@@ -34,7 +71,7 @@ The environment is similar to the [Unity's Banana Collector environment](https:/
 
 2. Place the file in the Deep_RL_ND_Project1 GitHub repository, and unzip (or decompress) the file. 
 
-### Instructions
+## Instructions
 
 This project used a value-based RL method called [Deep Q-Networks](https://en.wikipedia.org/wiki/Q-learning#Deep_Q-learning) to train the agent. To get started, execute the provided notebook `Navigation.ipynb` in this repository. This agent was trained in the Udacity online workspace, that allows the use of a Nvidia K80 GPU.
 
