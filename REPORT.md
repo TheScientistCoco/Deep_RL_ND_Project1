@@ -1,7 +1,7 @@
 # Project 1: Navigation
 Yu Tao
 
-### Overview
+## Overview
 
 In this project, a reinforcement learning (RL) agent was trained to navigate (and collect bananas!) in a large, square world. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. The goal of the agent is to collect as many yellow bananas as possible while avoiding blue bananas. The task is episodic, and in order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.
 
@@ -11,7 +11,9 @@ The environment is similar to the [Unity's Banana Collector environment](https:/
 - **`2`** - turn left.
 - **`3`** - turn right.
 
-### Learning Algorithm
+## Learning Algorithm
+
+### Deep Q-Networks
 
 This project implemented a value-based method called [Deep Q-Networks](https://en.wikipedia.org/wiki/Q-learning). A DQN, or Deep Q-Network, represents the action-value function in a Q-Learning framework as a neural network.
 
@@ -21,13 +23,29 @@ Deep RL use non-linear function approximators (deep neural network) to calculate
 
 For detailed information on DQN, please look at the original [Deep Q-Learning algorithm paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf).
 
-The model architecture is as follows:
+### Hyperparameters
+
+The DQN used the following hyperparameters (details in dqn_agent.py)
+
+```
+BUFFER_SIZE = int(1e5)  # replay buffer size
+BATCH_SIZE = 64         # minibatch size 
+GAMMA = 0.995           # discount factor 
+TAU = 1e-3              # for soft update of target parameters
+LR = 5e-4               # learning rate 
+UPDATE_EVERY = 4        # how often to update the network
+```
+
+### Model Architecture
+
+The model architecture is as follows (details in model.py):
 
 ![DQN model](./images/Model.png)
 
-I built a DQN with 2 fully-connected (FC) layers with 64 nodes, each followed by a ReLu activation function. The network used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64. This model solved the environment in 513 episodes.
+The number of the input units of the neural network is 37, corresponding to the state space dimension. The number of the output nodes of the neural network is 4, corresponding to the action space dimension. I built a DQN with 2 fully-connected (FC) layers with 64 nodes, each followed by a ReLu activation function. The network used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64. This model solved the environment in 513 episodes.
 
-### Plot of Rewards
+
+## Plot of Rewards
 
 
 
