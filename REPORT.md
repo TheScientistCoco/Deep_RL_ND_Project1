@@ -11,7 +11,7 @@ The environment is similar to the [Unity's Banana Collector environment](https:/
 - **`2`** - turn left.
 - **`3`** - turn right.
 
-### Learning algorithm
+### Learning Algorithm
 
 This project implemented a value-based method called [Deep Q-Networks](https://en.wikipedia.org/wiki/Q-learning). A DQN, or Deep Q-Network, represents the action-value function in a Q-Learning framework as a neural network.
 
@@ -27,24 +27,11 @@ The model architecture is as follows:
 
 I built a DQN with 2 fully-connected (FC) layers with 64 nodes, each followed by a ReLu activation function. The network used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64. This model solved the environment in 513 episodes.
 
+### Plot of Rewards
 
-Deep Q Learning combines 2 approaches :
-- A Reinforcement Learning method called [Q Learning](https://en.wikipedia.org/wiki/Q-learning) (aka SARSA max)
-- A Deep Neural Network to learn a Q-table approximation (action-values)
 
-Especially, this implementation includes the 2 major training improvements by [Deepmind](https://deepmind.com) and described in their [Nature publication : "Human-level control through deep reinforcement learning (2015)"](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
-- Experience Replay 
-- Fixed Q Targets
 
-> Reinforcement learning is known to be unstable or even to diverge when a nonlinear function approximator such as a neural network is used to represent the action-value (also known as Q) function20. This instability has several causes: the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and therefore change the data distribution, and the correlations
-between the action-values and the target values .
-We address these instabilities with a novel variant of Q-learning, which uses two key ideas. First, we used a biologically inspired mechanism termed experience replay that randomizes over the data, thereby removing correlations in the observation sequence and smoothing over changes in the data distribution. Second, we used an iterative update that adjusts the action-values towards target values that are only periodically updated, thereby reducing correlations with the target.
 
-### Algorithm
-
-![Deep Q-Learning algorithm from Udacity course](./images/DQN.png)
-
-This algorithm screenshot is taken from the [Deep Reinforcement Learning Nanodegree course](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893)
 
 
 ### Code implementation
@@ -107,7 +94,7 @@ Given the chosen architecture and parameters, our results are :
 
 **These results meets the project's expectation as the agent is able to receive an average reward (over 100 episodes) of at least +13, and in 1023 episodes only** (In comparison, according to Udacity's solution code for the project, their agent was benchmarked to be able to solve the project in fewer than 1800 episodes)
 
-### Ideas for future work
+### Ideas for Future Work
 
 To improve the performance of the agent, there are several ideas to modify the deep Q-Learning algorithm we have used:
 -	**Double DQN**: Deep Q-Learning tends to [overestimate](https://www.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1993_1/thrun_sebastian_1993_1.pdf) the action values. Double Q-Learning has been shown to work well in practice to help with [this](https://arxiv.org/abs/1509.06461).
