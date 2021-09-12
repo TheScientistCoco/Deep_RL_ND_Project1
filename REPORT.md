@@ -1,38 +1,22 @@
 # Project 1: Navigation
+Yu Tao
 
-## Project's goal
+### Overview
 
-In this project, **the goal is to train an agent to navigate a virtual world and collect as many yellow bananas as possible while avoiding blue bananas**
+In this project, a reinforcement learning (RL) agent was trained to navigate (and collect bananas!) in a large, square world. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. The goal of the agent is to collect as many yellow bananas as possible while avoiding blue bananas. The task is episodic, and in order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.
 
-![In Project 1, train an agent to navigate a large world.](images/navigation.gif)
+The environment is similar to the [Unity's Banana Collector environment](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#banana-collector). The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction. Given this information, the agent has to learn how to best select actions. Four discrete actions are available, corresponding to:
+- **`0`** - move forward.
+- **`1`** - move backward.
+- **`2`** - turn left.
+- **`3`** - turn right.
 
-## Environment details
+### Learning algorithm
 
-The environment is based on [Unity ML-agents](https://github.com/Unity-Technologies/ml-agents)
+This project implemented a value-based method called [Deep Q-Networks](https://deepmind.com/research/dqn/). A DQN, or Deep Q-Network, represents the action-value function in a Q-Learning framework as a neural network.
 
-Note: The project environment provided by Udacity is similar to, but not identical to the Banana Collector environment on the Unity ML-Agents GitHub page.
+RL is notoriously unstable when neural networks are used to represent the action values (weights oscillate and diverge due to the high correlation between actions and states). Deep Q-Learning algorithm addressed these instabilities by using two key features: (1) Experience Replay; (2) Fixed Q-Targets.
 
-> The Unity Machine Learning Agents Toolkit (ML-Agents) is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents. Agents can be trained using reinforcement learning, imitation learning, neuroevolution, or other machine learning methods through a simple-to-use Python API. 
-
-A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Thus, the goal of the agent is to collect as many yellow bananas as possible while avoiding blue bananas.
-
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around the agent's forward direction. 
-
-Given this information, the agent has to learn how to best select actions. Four discrete actions are available, corresponding to:
-
-- 0 - move forward.
-- 1 - move backward.
-- 2 - turn left.
-- 3 - turn right.
-
-The task is episodic, and **in order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.**
-
-
-## Agent Implementation
-
-### Deep Q-Networks
-
-This project implements a *Value Based* method called [Deep Q-Networks](https://deepmind.com/research/dqn/). 
 
 Deep Q Learning combines 2 approaches :
 - A Reinforcement Learning method called [Q Learning](https://en.wikipedia.org/wiki/Q-learning) (aka SARSA max)
