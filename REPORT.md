@@ -23,9 +23,9 @@ For detailed information on DQN, please look at the original [Deep Q-Learning al
 
 The model architecture is as follows:
 
+![DQN model](./images/Model.png)
 
-
-I built a DQN with 2 fully-connected (FC) layers with 1024 nodes, each followed by a ReLu activation function. The network used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64. This model solved the environment in 513 episodes.
+I built a DQN with 2 fully-connected (FC) layers with 64 nodes, each followed by a ReLu activation function. The network used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64. This model solved the environment in 513 episodes.
 
 
 Deep Q Learning combines 2 approaches :
