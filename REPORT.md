@@ -42,18 +42,14 @@ The model architecture is as follows (details in model.py):
 
 ![DQN model](./images/Model.png)
 
-The number of the input units of the neural network is 37, corresponding to the state space dimension. The number of the output nodes of the neural network is 4, corresponding to the action space dimension. I built a DQN with 2 fully-connected (FC) layers with 64 nodes, each followed by a ReLu activation function. The network used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64. This model solved the environment in 489 episodes.
+The number of the input units of the neural network is 37, corresponding to the state space dimension. The number of the output nodes of the neural network is 4, corresponding to the action space dimension. I built a DQN with 2 fully-connected (FC) layers with 64 nodes, each followed by a ReLu activation function. The network used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64.
 
 
 ### Plot of Rewards
 
 ![DQN score](./images/Score.png)
 
-
-
-
-
-**These results meets the project's expectation as the agent is able to receive an average reward (over 100 episodes) of at least +13, and in 1023 episodes only** (In comparison, according to Udacity's solution code for the project, their agent was benchmarked to be able to solve the project in fewer than 1800 episodes)
+This model solved the environment in **489** episodes, which meets the requirement that the agent is able to receive an average reward (over 100 episodes) of at least +13.
 
 ## Ideas for Future Work
 
