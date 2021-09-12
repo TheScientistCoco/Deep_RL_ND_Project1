@@ -42,12 +42,12 @@ The model architecture is as follows (details in model.py):
 
 ![DQN model](./images/Model.png)
 
-The number of the input units of the neural network is 37, corresponding to the state space dimension. The number of the output nodes of the neural network is 4, corresponding to the action space dimension. I built a DQN with 2 fully-connected (FC) layers with 64 nodes, each followed by a ReLu activation function. The network used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64. This model solved the environment in 513 episodes.
+The number of the input units of the neural network is 37, corresponding to the state space dimension. The number of the output nodes of the neural network is 4, corresponding to the action space dimension. I built a DQN with 2 fully-connected (FC) layers with 64 nodes, each followed by a ReLu activation function. The network used the Adam optimizer, and the learning rate was set to 0.0005, with a batch size of 64. This model solved the environment in 489 episodes.
 
 
 ### Plot of Rewards
 
-
+![DQN score](./images/Score.png)
 
 
 
